@@ -1,0 +1,15 @@
+﻿<Window x:Class="projectUP2.AdminSign"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projectUP2"
+        mc:Ignorable="d"
+        Title="AdminSign" Height="250" Width="400">
+    <StackPanel Background="#e1e4ff">
+        <Label Content="Вход в администраторский режим" HorizontalAlignment="Center" FontFamily="Tahoma" FontSize="22" Foreground="#ff4a6d" Margin="12"/>
+        <Label Content="Введите код для входа:" Margin="12"/>
+        <PasswordBox x:Name="login" Margin="12" FontFamily="Tahoma"/>
+        <Button x:Name="btn1" Content="Войти" HorizontalAlignment="Center" Width="100" Background="#ff4a6d" Click="btn1_Click"/>
+    </StackPanel>
+</Window>

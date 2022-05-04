@@ -1,0 +1,29 @@
+﻿<Window x:Class="projectUP2.Spisokzapis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projectUP2"
+        mc:Ignorable="d"
+        Title="Spisokzapis" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Background="#ff4a6d">
+            <Image Source="/logo/beauty_logo.png" Width="60" Height="60"/>
+            <Label Content="Список клиентов и запись на процедуры" FontSize="26" FontFamily="Tahoma" Foreground="White" FontWeight="Bold"/>
+            <Button Content="Назад" Click="Button_Click" Width="140" Height="24" Background="White" FontWeight="Bold" Margin="12"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left">
+            <ListBox x:Name="listbox2" Height="350" Width="400">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Label Content="{Binding StartTime, StringFormat=Время начала процедуры{0}}"/>
+                            <Label Content="{Binding ClientID,StringFormat=Фамилия клиента{0}}"/>
+                            <Label Content="{Binding ServiceID,StringFormat=Наименование услуги {0}}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </StackPanel>
+</Window>
